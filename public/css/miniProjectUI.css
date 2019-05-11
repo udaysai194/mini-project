@@ -1,0 +1,32 @@
+body {
+    background-color: whitesmoke;
+}
+
+header .nav-wrapper {
+    background-color: #004d40;
+    display: solid;
+}
+
+.row-self {
+    padding: 5px 5px;
+    border: 1px solid #004d40;
+    border-radius: 5px;
+    background-color : white;
+    margin: 5px 0px;
+}
+
+.load-label {
+    color: #3B3B3B;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 5px;
+    width: 48%;
+    display: inline-block;
+}
+
+.switch {
+    width: 50%;
+    text-align: right;
+    display: inline-block;
+}
+
