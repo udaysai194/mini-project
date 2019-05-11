@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="./css/miniProjectUI.css">
     <link rel="stylesheet" href="./css/materialize.min.css">
+    <script src="./socketIO/socket.io.js"></script>
     
     <title>Home automation remote</title>
   </head>
@@ -22,86 +23,95 @@
         </nav>
       </header>
 
-      <!-- row 1 light -->
-      <div class="container" style="margin-top:20px;">
-        <div class="row-self">
-            <div class="load-label"> LIGHT</div>
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
+      <div class="container1">
+        <!-- led 1 -->
+        <div class="container" style="margin-top:20px;">
+          <div class="row-self">
+              <div class="load-label"> LED 1</div>
+              <div class="switch">
+                <label>
+                  <input type="checkbox" id="led1">
+                  <span class="lever"></span>
+                </label>
+              </div>
+          </div>
+        </div>
+
+        <!-- led 2 -->
+        <div class="container">
+          <div class="row-self">
+              <div class="load-label"> LED 2</div>
+              <div class="switch">
+                <label>
+                  <input type="checkbox" id="led2">
+                  <span class="lever"></span>
+                </label>
+              </div>
+          </div>
+        </div>
+
+        <!-- led 3 -->
+        <div class="container">
+          <div class="row-self">
+              <div class="load-label"> LED 3</div>
+              <div class="switch">
+                <label>
+                  <input type="checkbox" id="led3">
+                  <span class="lever"></span>
+                </label>
+              </div>
+          </div>
+        </div>
+
+        <!-- led 4 -->
+        <div class="container">
+          <div class="row-self">
+              <div class="load-label"> LED 4</div>
+              <div class="switch">
+                <label>
+                  <input type="checkbox" id="led4">
+                  <span class="lever"></span>
+                </label>
+              </div>
+          </div>
+        </div>
+            
+        <!-- led 5-->
+        <div class="container">
+          <div class="row-self">
+              <div class="load-label"> LED 5</div>
+              <div class="switch">
+                <label>
+                  <input disabled type="checkbox" id="led5">
+                  <span class="lever"></span>
+                </label>
+              </div>
+          </div>
+        </div>
+
+        <!-- led 6 -->
+        <div class="container">
+          <div class="row-self">
+              <div class="load-label"> LED 6</div>
+              <div class="switch">
+                <label>
+                  <input disabled type="checkbox" id="led6">
+                  <span class="lever"></span>
+                </label>
+              </div>
+          </div>
         </div>
       </div>
 
-      <!-- row 2 fan -->
-      <div class="container">
-        <div class="row-self">
-            <div class="load-label"> FAN</div>
-            <div class="switch">
-              <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-        </div>
-      </div>
+      <div style="height:400px;"></div>
 
-      <!-- row 3 TV -->
-      <div class="container">
-        <div class="row-self">
-            <div class="load-label"> TV</div>
-            <div class="switch">
-              <label>
-                <input disabled type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-        </div>
-      </div>
+      <footer>
+        Total devices connected : <span id="userCount">0</span>
+      </footer>
 
-      <!-- row 4 light 2 -->
-      <div class="container">
-        <div class="row-self">
-            <div class="load-label"> LIGHT 2</div>
-            <div class="switch">
-              <label>
-                <input disabled type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-        </div>
-      </div>
-          
-      <!-- row 5 light 3-->
-      <div class="container">
-        <div class="row-self">
-            <div class="load-label"> LIGHT 3</div>
-            <div class="switch">
-              <label>
-                <input disabled type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-        </div>
-      </div>
-
-      <!-- row 6 fan 2 -->
-      <div class="container">
-        <div class="row-self">
-            <div class="load-label"> FAN 2</div>
-            <div class="switch">
-              <label>
-                <input disabled type="checkbox">
-                <span class="lever"></span>
-              </label>
-            </div>
-        </div>
-      </div>
-
-      
+    <script src="./index.js"></script>
     <script src="./css/jquery-3.4.1.min.js"></script>
     <script src="./css/materialize.min.js"></script>
+
   </body>
 </html>

@@ -1,5 +1,6 @@
 body {
     background-color: whitesmoke;
+    height: 100%;
 }
 
 header .nav-wrapper {
@@ -30,3 +31,14 @@ header .nav-wrapper {
     display: inline-block;
 }
 
+.container-1 {
+    min-height: calc(100vh - 70px);
+}
+
+footer {
+    background-color: black;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}

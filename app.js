@@ -14,7 +14,22 @@ app.use(express.static('public'));
 //setup socket
 var io = socket(server);
 
-io.on('conncetion', (socket) => {
-    console.log('socket connection made');
+var led = [0,0,0,0];
+var usersCount = 0;
+
+//on connection of a socket
+io.on('connection', (socket) => {
+    usersCount++;
+    io.emit('usersCount', usersCount);
+    socket.on('disconnect', () => {
+        usersCount--;
+        io.emit('usersCount', usersCount);
+    });
+    console.log('connected ', socket.id);
+    io.emit('start', led);
+    socket.on('change', (data) => {
+        led = data.slice();
+        io.emit('start', led);
+    });
     
 })
